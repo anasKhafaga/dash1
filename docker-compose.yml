@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  # Dashboard
+  app:
+    image: anaskhafaga/dash1
+    ports:
+      - 8080:80
+    networks:
+      - app
+
+  # mongodb
+  mogno:
+    image: mongo:bionic
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: anaskhafaga
+      MONGO_INITDB_ROOT_PASSWORD: mongodb
+    networks:
+      - app
+    volumes:
+      - db:/data/db
+      - configdb:/data/configdb
+
+  # redis [cache]
+  redis:
+    image: redis:rc-alpine3.11
+    volumes:
+      - cache:/data
+    networks:
+      - app
+
+volumes:
+  db:
+  configdb:
+  cache:
+
+networks:
+  app:
