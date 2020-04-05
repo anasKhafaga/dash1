@@ -1,22 +1,14 @@
-version: '3'
+version: '3.7'
 
 services:
-  # Dashboard
-  app:
-    image: anaskhafaga/dash1
-    ports:
-      - 8080:80
-    networks:
-      - app
-
   # mongodb
-  mogno:
+  mongo:
     image: mongo:bionic
     environment:
       MONGO_INITDB_ROOT_USERNAME: anaskhafaga
       MONGO_INITDB_ROOT_PASSWORD: mongodb
     networks:
-      - app
+      app:
     volumes:
       - db:/data/db
       - configdb:/data/configdb
@@ -27,7 +19,19 @@ services:
     volumes:
       - cache:/data
     networks:
-      - app
+      app:
+
+  # Dashboard
+  app:
+    image: anaskhafaga/dash1
+    ports:
+      - 8080:80
+    links: 
+      - "mongo"
+      - "redis"
+    networks:
+      app:
+
 
 volumes:
   db:
