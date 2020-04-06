@@ -1,2 +1,0 @@
-{"message":"127.0.0.1 - - [05/Apr/2020:17:03:08 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\"\n","level":"info"}
-{"message":"127.0.0.1 - - [05/Apr/2020:17:03:14 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36\"\n","level":"info"}

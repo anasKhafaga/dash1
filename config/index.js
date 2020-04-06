@@ -1,3 +1,7 @@
+const { infoLogger, errorLogger, warnLogger } = require('./logger');
+
 module.exports = {
-  logger: require('./winston')
+  infoLogger,
+  errorLogger,
+  warnLogger,
 }

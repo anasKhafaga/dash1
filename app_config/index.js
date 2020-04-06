@@ -7,4 +7,5 @@ switch (process.env.NODE_ENV) {
     break;
   case 'test':
     module.exports = require('./test')
+    break;
 };
