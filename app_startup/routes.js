@@ -7,7 +7,7 @@
 
 'use strict'
 
-const {home, users} = require('../routes/index');
+const {home, auth} = require('../routes');
 
 /**
  * Function that execute all routes in app.js
@@ -16,5 +16,5 @@ const {home, users} = require('../routes/index');
  */
 module.exports = (app) => {
   app.use('/', home);
-  app.use('/users', users);
+  app.use('/auth', auth);
  };
