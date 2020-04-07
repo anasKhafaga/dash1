@@ -61,7 +61,10 @@ const errorHandler = (app) => {
 
       // render the error page
       res.status(err.status || 500);
-      res.render('404');
+      res.render('error', {
+        code: res.statusCode,
+        message: err.message
+      });
     }
   );
 };

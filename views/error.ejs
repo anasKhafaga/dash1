@@ -1,21 +1,21 @@
-<%- include('../includes/layout', {title: '404'}) %>
+<%- include('./includes/layout', {title: '404'}) %>
 
   <!-- Begin Page Content -->
   <div class="container-fluid">
 
     <!-- 404 Error Text -->
     <div class="text-center">
-      <div class="error mx-auto" data-text='<%= code%>'</div>><%= code%></div>
-      <p class="lead text-gray-800 mb-5"><%= message%></p>
+      <div class="error mx-auto" data-text='<%= code %>'</div><%= code %></div>
+      <p class="lead text-gray-800 mb-5"><%= message %></p>
       <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
       <a href="/">&larr; Back to Home</a>
     </div>
 
   </div>
 
-<%- include('../includes/logout') %>
+<%- include('./includes/logout') %>
   
-<%- include('../includes/footer') %>
+<%- include('./includes/footer') %>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
