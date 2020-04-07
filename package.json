@@ -2,11 +2,15 @@
   "name": "dash1",
   "version": "0.0.0",
   "private": true,
-  "engines": {"node": ">=8.10.0"},
+  "engines": {
+    "node": ">=8.10.0"
+  },
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "jest"
   },
   "dependencies": {
+    "@types/jest": "^25.2.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^3.0.2",
@@ -14,11 +18,13 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "redis": "^3.0.2",
+    "serve-favicon": "^2.5.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-node": "^11.1.0",
+    "jest": "^25.2.7",
     "nodemon": "^2.0.2"
   }
 }
