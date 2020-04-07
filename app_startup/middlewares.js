@@ -35,4 +35,5 @@ module.exports = (app) => {
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use(express.static(path.join(process.cwd(), 'public')));
+  app.use('/users', express.static(path.join(process.cwd(), 'public')));
 };
