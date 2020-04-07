@@ -8,6 +8,8 @@
  * @requires express
  */
 
+'use strict'
+ 
 // NPM modules
 const express = require('express');
 

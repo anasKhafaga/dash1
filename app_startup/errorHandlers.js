@@ -5,6 +5,8 @@
  * @requires config/logger
  */
 
+'use strict'
+
 // NPM modules
 const createError = require('http-errors');
 const debug = require('debug')('app:errorHandler');

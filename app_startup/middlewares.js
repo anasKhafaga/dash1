@@ -8,6 +8,8 @@
  * @requires config/logger
  */
 
+'use strict'
+ 
 // Core modules
 const path = require('path');
 
@@ -15,6 +17,7 @@ const path = require('path');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const morgan = require('morgan');
+const favicon = require('serve-favicon');
 
 // Local modules
 const { infoLogger } = require('../config/index');
@@ -26,9 +29,10 @@ const { infoLogger } = require('../config/index');
  */
 
 module.exports = (app) => { 
+  app.use(favicon(path.join(process.cwd(), 'public', 'favicon.ico')));
   app.use(morgan('combined', { stream: infoLogger.stream }));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(process.cwd(), 'public')));
 };

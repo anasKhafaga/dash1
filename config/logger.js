@@ -5,6 +5,9 @@
  * @exports errorLogger
  * @exports warnLogger
  */
+
+'use strict'
+
 const { createLogger, transports, format } = require('winston');
 
 // Create logger on info level

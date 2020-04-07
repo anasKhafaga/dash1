@@ -3,6 +3,9 @@
  * @module app_startup/viewEngine
  * @requires path
  */
+
+'use strict'
+
 const path = require('path');
 
 /**
@@ -11,6 +14,6 @@ const path = require('path');
  * @param {Object} app - The express app
  */
 module.exports = (app) => { 
-  app.set('views', path.join(__dirname, 'views'));
+  app.set('views', path.join(process.cwd(), 'views'));
   app.set('view engine', 'ejs');
 };

@@ -4,6 +4,9 @@
  * @requires routes/home
  * @requires routes/users
  */
+
+'use strict'
+
 const {home, users} = require('../routes/index');
 
 /**
